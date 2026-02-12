@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="global.css">
+  <script src="tangled-consent.js" defer></script>
 </head>
 
 <body class="page-contact">
@@ -109,7 +110,25 @@
                 <div class="attach-preview" aria-live="polite"></div>
               </div>
             </div>
+            <label class="consent custom-check" style="grid-column: 1 / -1; margin-top: 8px;">
+              <input class="chk-input" type="checkbox" id="ct-consent" required />
+              <span class="chk-wrap">
+                <span class="chk-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="5,13 10,18 19,7" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round"></polyline>
+                  </svg>
+                </span>
+              </span>
+              <span class="chk-label">
+                I agree to the <a href="terms_of_services.html"
+                  style="color:var(--page-primary); text-decoration:underline;">terms</a> and <a
+                  href="privacy_policy.html" style="color:var(--page-primary); text-decoration:underline;">privacy
+                  policy</a>.
+              </span>
+            </label>
           </div>
+
 
 
           <div class="actions">

@@ -7091,14 +7091,107 @@ html.page-date-active {
 
 .page-support .custom-check {
   grid-column: 1 / -1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   font-size: 14px;
   color: var(--textSecondary);
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .page-support .overlay .dialog form {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .page-support .attach-drop {
+    display: none;
+  }
+
+  .page-support .attach-trigger {
+    flex: 1 1 100%;
+    height: 52px;
+  }
+
+  .page-support .overlay .dialog header {
+    padding: 16px 24px;
+  }
+
+  .page-support .actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .page-support .actions button {
+    width: 100%;
+    height: 52px;
+  }
+}
+
+/* Custom Minimalist Checkbox */
+.custom-check {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+  gap: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.chk-label {
+  line-height: 1.45;
+  padding-top: 1px;
+}
+
+
+.custom-check:hover {
+  opacity: 0.8;
+}
+
+.chk-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.chk-box {
+  width: 20px;
+  height: 20px;
+  background: #f8f9fb;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+  flex-shrink: 0;
+}
+
+.chk-box svg {
+  width: 14px;
+  height: 14px;
+  transform: scale(0.6) translateY(1px);
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chk-input:checked~.chk-wrap .chk-box {
+  background: #1f1f1f;
+  border-color: #1f1f1f;
+}
+
+.chk-input:checked~.chk-wrap .chk-box svg {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.chk-input:focus-visible~.chk-wrap .chk-box {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border-color: #1f1f1f;
+}
+
 
 
 
