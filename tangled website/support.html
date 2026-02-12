@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Tangled</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="shortcut icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="apple-touch-icon" href="Images/tangled-spiral-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body class="page-support">
+  <!-- Header widget mount -->
+  <div id="app-header-mount"></div>
+
+  <main class="page-main">
+    <section class="support-hero" aria-label="Support Hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-header" data-reveal>
+          <h1 class="hero-title">How can we help?</h1>
+          <p class="hero-subtitle">Search for answers or browse popular topics below.</p>
+        </div>
+
+        <div class="search-wrapper" data-reveal>
+          <div class="field">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false" width="20" height="20">
+                <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></circle>
+                <polyline points="17.5,17.5 21,21" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"></polyline>
+              </svg>
+            </span>
+            <input id="support-search" class="ui-search" type="search"
+              placeholder="Search help (payments, boost, account, safety)" autocomplete="off" />
+            <button class="clear-btn" id="support-clear" aria-label="Clear search" title="Clear">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20">
+                <polyline points="6,6 18,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></polyline>
+                <polyline points="18,6 6,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="pill-grid" data-reveal-stagger>
+          <button class="pill seed-search" data-keywords="login otp">
+            <span class="pill-icon user-icon"></span>
+            Login / OTP
+          </button>
+          <button class="pill seed-search" data-keywords="subscription premium select billing">
+            <span class="pill-icon card-icon"></span>
+            Plans &amp; Billing
+          </button>
+          <button class="pill seed-search" data-keywords="boost visibility 30 60">
+            <span class="pill-icon zap-icon"></span>
+            Boost
+          </button>
+          <button class="pill seed-search" data-keywords="report block safety">
+            <span class="pill-icon shield-icon"></span>
+            Safety
+          </button>
+          <button class="pill seed-search" data-keywords="messages matches photos">
+            <span class="pill-icon message-icon"></span>
+            Messages
+          </button>
+          <button class="pill seed-search" data-keywords="privacy data export delete">
+            <span class="pill-icon lock-icon"></span>
+            Privacy
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by category -->
+    <section class="section categories-section" aria-label="Browse by category">
+      <div class="section-container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">Browse by category</h2>
+          <p class="section-description">Explore specific areas where you need assistance.</p>
+        </div>
+        <div class="cat-grid" data-reveal-stagger>
+          <article class="cat-card seed-search"
+            data-keywords="account login signup verify email phone change name delete">
+            <div class="cat-icon user-icon"></div>
+            <h3>Account &amp; Profile</h3>
+            <p>Sign‑in, verification, profile edits, and deletion.</p>
+          </article>
+          <article class="cat-card seed-search"
+            data-keywords="payments subscription premium select refund price upgrade billing">
+            <div class="cat-icon card-icon"></div>
+            <h3>Plans &amp; Billing</h3>
+            <p>Premium/Select benefits, upgrades, receipts, refunds.</p>
+          </article>
+          <article class="cat-card seed-search"
+            data-keywords="safety report block harassment privacy community guidelines">
+            <div class="cat-icon shield-icon"></div>
+            <h3>Safety &amp; Reporting</h3>
+            <p>Report, block, privacy controls, guidelines.</p>
+          </article>
+          <article class="cat-card seed-search" data-keywords="boost spotlight visibility likes timer 30 60">
+            <div class="cat-icon zap-icon"></div>
+            <h3>Boost &amp; Visibility</h3>
+            <p>How Boost works, timers, tips to get matches.</p>
+          </article>
+          <article class="cat-card seed-search" data-keywords="messaging chat matches conversations photos disappeared">
+            <div class="cat-icon message-icon"></div>
+            <h3>Messages &amp; Matches</h3>
+            <p>Start chats, vanished matches, sending photos.</p>
+          </article>
+          <article class="cat-card seed-search" data-keywords="privacy data export download gdpr delete account">
+            <div class="cat-icon lock-icon"></div>
+            <h3>Privacy &amp; Data</h3>
+            <p>Download data, delete account, controls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top FAQs -->
+    <section class="section faq-section" aria-label="Top FAQs">
+      <div class="section-container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">Quick answers to common questions.</p>
+        </div>
+        <div class="faq-grid" data-reveal-stagger>
+          <details class="faq" id="login-help"
+            data-keywords="login sign in otp email google facebook cannot access password reset">
+            <summary>
+              I can’t log in — what should I try first?
+            </summary>
+            <div class="answer">
+              <ol>
+                <li>Update the app to the latest version.</li>
+                <li>Use Login with Google, Facebook, or Email (whichever you signed up with).</li>
+                <li>Wait 60s before requesting a new OTP. Check spam for email codes.</li>
+                <li>Turn off VPN and ensure your clock/timezone are automatic.</li>
+                <li>Still stuck? <a href="mailto:support@tangled.app?subject=Login%20help">Email support</a> from the
+                  device with your registered details.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="faq" id="plans"
+            data-keywords="payment refund premium select charged billing receipt upgrade cancel">
+            <summary>
+              I was charged but didn’t get Premium/Select.
+            </summary>
+            <div class="answer">
+              Plan activation can take a few minutes. Restart the app and check <em>Get Premium/Select</em>. If benefits
+              don’t appear, share your order ID and purchase email with support. Eligible cases are refunded.
+            </div>
+          </details>
+
+          <details class="faq"
+            data-keywords="boost how works timer 30 minutes 60 minutes visibility likes discoverability">
+            <summary>
+              How does Boost work?
+            </summary>
+            <div class="answer">
+              Boost increases your profile’s visibility for the selected duration (30 or 60 minutes). You’ll see a
+              countdown and progress. For best results, refresh photos, add a strong first line, and stay online during
+              Boost.
+            </div>
+          </details>
+
+          <details class="faq" data-keywords="name age change edit profile verification">
+            <summary>
+              Can I change my name or age?
+            </summary>
+            <div class="answer">
+              Name and age can’t be edited once registered. If you believe there was a sign‑up mistake, please <a
+                href="mailto:support@tangled.app?subject=Name/Age%20correction%20request">contact support</a> for a
+              review.
+            </div>
+          </details>
+
+          <details class="faq" data-keywords="messages match disappeared unmatched ban">
+            <summary>
+              Why did a match or message disappear?
+            </summary>
+            <div class="answer">
+              Matches can disappear if the other person deletes their account, unmatches, or is removed for safety
+              reasons. If the app shows an error consistently, reinstall and try again.
+            </div>
+          </details>
+
+          <details class="faq" id="privacy" data-keywords="privacy data export download gdpr delete account">
+            <summary>
+              How do I download my data or delete my account?
+            </summary>
+            <div class="answer">
+              You can only edit or delete your data. Downloading your data isn’t available. To edit, go to <em>Profile →
+                Edit Profile</em> and update your information. To delete your account, go to <em>Settings → Other
+                Settings</em>. Deletion permanently removes your messages, photos, and profile info.
+            </div>
+          </details>
+
+          <details class="faq" data-keywords="report block user safety harassment scam catfish">
+            <summary>
+              How do I report or block someone?
+            </summary>
+            <div class="answer">
+              Open the profile or chat, tap •••, then choose <em>Report</em> or <em>Block</em>. Reports are reviewed by
+              our Safety team. For immediate threats, contact local authorities first.
+            </div>
+          </details>
+
+          <details class="faq" data-keywords="verification blue tick selfie guidelines">
+            <summary>
+              How do I verify my profile?
+            </summary>
+            <div class="answer">
+              Verification is subject to availability. Subscribed users automatically receive a subscription
+              verification
+              badge. There is no regular verification flow at this time.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Need more help -->
+    <section class="section help-cta-section" aria-label="Need more help">
+      <div class="section-container">
+        <div class="help-banner" data-reveal>
+          <div class="banner-content">
+            <h3>Still haven't found what you're looking for?</h3>
+            <p>Our support team is here to help you with any issues or questions.</p>
+          </div>
+          <div class="help-actions">
+            <a class="btn btn-primary" href="mailto:support@tangled.app?subject=Support%20request">Email Support</a>
+            <a class="btn btn-secondary" href="#report" data-close>Report a Problem</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Report a problem overlay -->
+  <div id="report-overlay" class="overlay" aria-hidden="true">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="report-title">
+      <header>
+        <h3 id="report-title">Report a problem</h3>
+        <button class="close-btn" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <polyline points="6,6 18,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></polyline>
+            <polyline points="18,6 6,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></polyline>
+          </svg>
+        </button>
+      </header>
+      <form id="report-form" novalidate>
+        <div class="form-row">
+          <label for="rp-email">Your email</label>
+          <input class="ui-input" id="rp-email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="rp-category">Category</label>
+          <div class="ui-select-wrap" data-select id="rp-category" role="combobox" aria-haspopup="listbox"
+            aria-expanded="false" aria-owns="rp-category-menu">
+            <button type="button" class="select-trigger" data-select-trigger aria-controls="rp-category-menu">
+              <span class="placeholder">Choose a category</span>
+            </button>
+            <svg class="select-caret" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6,9 12,15 18,9" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"></polyline>
+            </svg>
+            <div class="select-menu" id="rp-category-menu" role="listbox" tabindex="-1">
+              <div class="select-option" role="option" data-value="Login / OTP">Login / OTP</div>
+              <div class="select-option" role="option" data-value="Plans &amp; Billing">Plans &amp; Billing</div>
+              <div class="select-option" role="option" data-value="Boost">Boost</div>
+              <div class="select-option" role="option" data-value="Messages &amp; Matches">Messages &amp; Matches</div>
+              <div class="select-option" role="option" data-value="Privacy &amp; Data">Privacy &amp; Data</div>
+              <div class="select-option" role="option" data-value="Safety &amp; Reporting">Safety &amp; Reporting</div>
+              <div class="select-option" role="option" data-value="Other">Other</div>
+            </div>
+            <input type="hidden" name="category" value="">
+          </div>
+        </div>
+        <div class="form-row" style="grid-column: 1 / -1;">
+          <label for="rp-subject">Subject</label>
+          <input class="ui-input" id="rp-subject" name="subject" type="text" required maxlength="120" />
+        </div>
+        <div class="form-row" style="grid-column: 1 / -1;">
+          <label for="rp-details">Details</label>
+          <textarea class="ui-textarea" id="rp-details" name="details" required maxlength="1000"></textarea>
+        </div>
+        <div class="form-row attach-wrap" style="grid-column: 1 / -1;">
+          <label>Attachment</label>
+          <div class="attach-ui" data-attach>
+            <input id="rp-attach" name="attach" type="file" accept="image/*,video/*,.txt,.log,.pdf" multiple hidden />
+            <button type="button" class="attach-trigger" data-attach-btn>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14 2v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path d="M12 11v6M9 14h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              Choose file
+            </button>
+            <div class="attach-drop" tabindex="0" aria-label="Drop a file here">
+              Drag &amp; drop a screenshot or log here
+            </div>
+            <div class="attach-preview" aria-live="polite"></div>
+          </div>
+        </div>
+        <label class="consent custom-check">
+          <input class="chk-input" type="checkbox" id="rp-consent" required />
+          <span class="chk-wrap">
+            <span class="chk-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="5,13 10,18 19,7" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"></polyline>
+              </svg>
+            </span>
+          </span>
+          I agree to share app logs &amp; diagnostics to help resolve this issue.
+        </label>
+        <div class="actions">
+          <button type="button" class="btn-ghost" data-close>Cancel</button>
+          <button type="submit" class="btn-primary">Send report</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Footer widget mount -->
+  <div id="app-footer-mount"></div>
+
+  <script>
+    fetch('index.html')
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        // Ensure logo sprite is present for <use href="#logo-tangled">
+        if (!document.getElementById('logo-tangled')) {
+          const sprite = doc.querySelector('svg symbol#logo-tangled');
+          if (sprite) {
+            const svgWrap = document.createElement('svg');
+            svgWrap.setAttribute('aria-hidden', 'true');
+            svgWrap.setAttribute('focusable', 'false');
+            svgWrap.setAttribute('width', '0');
+            svgWrap.setAttribute('height', '0');
+            svgWrap.setAttribute('style', 'position:absolute; width:0; height:0; overflow:hidden');
+            svgWrap.appendChild(sprite.cloneNode(true));
+            document.body.insertBefore(svgWrap, document.body.firstChild);
+          }
+        }
+        const headerTpl = doc.getElementById('app-header-template');
+        const footerTpl = doc.getElementById('app-footer-template');
+
+        const headerMount = document.getElementById('app-header-mount');
+        if (headerTpl && headerMount) {
+          const frag = headerTpl.content.cloneNode(true);
+          headerMount.replaceWith(frag);
+        }
+        const footerMount = document.getElementById('app-footer-mount');
+        if (footerTpl && footerMount) {
+          const frag = footerTpl.content.cloneNode(true);
+          footerMount.replaceWith(frag);
+        }
+
+        // After mounting, wire up the header hamburger just like on index.html
+        (function () {
+          function toggleHeader(expand, header, btn) {
+            if (!header) return;
+            const willExpand = (typeof expand === 'boolean') ? expand : !header.classList.contains('expanded');
+            header.classList.toggle('expanded', willExpand);
+            if (btn) {
+              btn.classList.toggle('is-open', willExpand);
+              btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+            }
+          }
+
+          // Event delegation so it works even if header is mounted later from template
+          document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.hamburger');
+            if (!btn) return;
+            const header = btn.closest('.site-header') || document.querySelector('.site-header');
+            toggleHeader(undefined, header, btn);
+          }, true);
+
+          // Close expanded state when resizing to desktop
+          let lastWidth = window.innerWidth;
+          window.addEventListener('resize', function () {
+            const now = window.innerWidth;
+            if (lastWidth !== now) {
+              if (now > 980) {
+                document.querySelectorAll('.site-header.expanded').forEach(function (h) {
+                  h.classList.remove('expanded');
+                  const b = h.querySelector('.hamburger');
+                  if (b) { b.classList.remove('is-open'); b.setAttribute('aria-expanded', 'false'); }
+                });
+              }
+              lastWidth = now;
+            }
+          });
+        })();
+
+        // Update footer year if present
+        (function () {
+          var y = document.getElementById('year');
+          if (y) { y.textContent = String(new Date().getFullYear()); }
+        })();
+        // --- Support page: FAQ search, clear, and category jump ---
+        (function () {
+          var input = document.getElementById('support-search');
+          if (!input) return;
+
+          var clearBtn = document.getElementById('support-clear');
+          var faqItems = Array.prototype.slice.call(document.querySelectorAll('details.faq'));
+          var categories = Array.prototype.slice.call(document.querySelectorAll('.seed-search'));
+
+          function normalize(s) { return (s || '').toLowerCase(); }
+          function tokens(q) { return normalize(q).split(/\s+/).filter(Boolean); }
+          function match(el, q) {
+            if (!q) return true;
+            var text = el.textContent || '';
+            var keys = el.getAttribute('data-keywords') || '';
+            var hay = normalize(text + ' ' + keys);
+            var ts = tokens(q);
+            // Match if ANY token appears (so pills like "subscription premium select billing" work as intended)
+            return ts.some(function (t) { return hay.indexOf(t) !== -1; });
+          }
+
+          function filter() {
+            var q = normalize(input.value.trim());
+            faqItems.forEach(function (d) {
+              var ok = match(d, q);
+              d.style.display = ok ? '' : 'none';
+              if (ok) { if (q) { d.open = true; } else { d.open = false; } }
+            });
+            // Categories light filter (do not hide layout; just dim)
+            categories.forEach(function (c) {
+              var ok = match(c, q);
+              c.style.opacity = q ? (ok ? '1' : '0.45') : '1';
+            });
+            // Clear button visibility
+            if (clearBtn) {
+              var hasValue = input.value.length > 0;
+              clearBtn.style.opacity = hasValue ? '1' : '0';
+              clearBtn.style.pointerEvents = hasValue ? 'auto' : 'none';
+            }
+          }
+
+          function clear() {
+            input.value = '';
+            filter();
+            input.focus();
+          }
+
+          input.addEventListener('input', filter);
+          if (clearBtn) clearBtn.addEventListener('click', clear);
+
+          // Click on a category seeds the search with its keywords
+          categories.forEach(function (c) {
+            c.addEventListener('click', function () {
+              var keys = c.getAttribute('data-keywords') || c.querySelector('h3')?.textContent || '';
+              input.value = (keys || '').trim();
+              filter();
+              var faqSection = document.querySelector('.faq-section');
+              if (faqSection) {
+                window.scrollTo({ top: faqSection.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' });
+              }
+            });
+          });
+
+          // Accordion behavior: close others when one opens
+          faqItems.forEach(function (el) {
+            el.addEventListener('toggle', function () {
+              if (this.open) {
+                faqItems.forEach(function (other) {
+                  if (other !== el) { other.open = false; }
+                });
+              }
+            });
+          });
+
+          // Initialize message
+          filter();
+        })();
+        // --- Report overlay wiring ---
+        (function () {
+          var triggers = Array.prototype.slice.call(document.querySelectorAll('a[href="#report"], [data-open="report"]'));
+          var overlay = document.getElementById('report-overlay');
+          if (!(overlay && triggers.length)) return;
+          // Custom select init
+          (function () {
+            var wraps = Array.prototype.slice.call(document.querySelectorAll('.ui-select-wrap[data-select]'));
+            if (!wraps.length) return;
+            wraps.forEach(function (wrap) {
+              var trigger = wrap.querySelector('[data-select-trigger]');
+              var menu = wrap.querySelector('.select-menu');
+              var hidden = wrap.querySelector('input[type="hidden"]');
+              var options = Array.prototype.slice.call(wrap.querySelectorAll('.select-option'));
+              var currentIndex = -1;
+              function open() {
+                wrap.classList.add('open');
+                wrap.setAttribute('aria-expanded', 'true');
+                // mark selected option
+                var sel = options.find(function (o) { return o.getAttribute('aria-selected') === 'true'; });
+                if (sel) { currentIndex = options.indexOf(sel); }
+                setTimeout(function () { menu && menu.focus({ preventScroll: true }); }, 0);
+                document.addEventListener('mousedown', onDocClick);
+                document.addEventListener('keydown', onKey);
+              }
+              function close() {
+                wrap.classList.remove('open');
+                wrap.setAttribute('aria-expanded', 'false');
+                document.removeEventListener('mousedown', onDocClick);
+                document.removeEventListener('keydown', onKey);
+                trigger && trigger.focus({ preventScroll: true });
+              }
+              function onDocClick(e) {
+                if (!wrap.contains(e.target)) close();
+              }
+              function choose(opt) {
+                options.forEach(function (o) { o.removeAttribute('aria-selected'); });
+                opt.setAttribute('aria-selected', 'true');
+                var text = opt.textContent.trim();
+                hidden.value = opt.getAttribute('data-value') || text;
+                trigger.innerHTML = text;
+              }
+              function onKey(e) {
+                if (!wrap.classList.contains('open')) return;
+                if (e.key === 'Escape') { close(); }
+                if (e.key === 'ArrowDown') {
+                  e.preventDefault();
+                  currentIndex = Math.min(options.length - 1, Math.max(0, currentIndex + 1));
+                  options[currentIndex].focus ? options[currentIndex].focus() : null;
+                  menu.scrollTop = options[currentIndex].offsetTop - 40;
+                }
+                if (e.key === 'ArrowUp') {
+                  e.preventDefault();
+                  currentIndex = Math.max(0, (currentIndex < 0 ? 0 : currentIndex - 1));
+                  options[currentIndex].focus ? options[currentIndex].focus() : null;
+                  menu.scrollTop = options[currentIndex].offsetTop - 40;
+                }
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  var opt = options[currentIndex] || options[0];
+                  if (opt) { choose(opt); close(); }
+                }
+              }
+              trigger.addEventListener('click', function () {
+                var isOpen = wrap.classList.contains('open');
+                isOpen ? close() : open();
+              });
+              options.forEach(function (opt, idx) {
+                opt.setAttribute('tabindex', '0');
+                opt.addEventListener('click', function () { choose(opt); close(); });
+                opt.addEventListener('keydown', function (e) {
+                  if (e.key === 'Enter') { choose(opt); close(); }
+                });
+              });
+            });
+          })();
+          var form = overlay.querySelector('#report-form');
+          // --- Custom attachment wiring ---
+          (function () {
+            var wrap = overlay.querySelector('[data-attach]');
+            if (!wrap) return;
+            var input = wrap.querySelector('#rp-attach');
+            var btn = wrap.querySelector('[data-attach-btn]');
+            var drop = wrap.querySelector('.attach-drop');
+            var preview = wrap.querySelector('.attach-preview');
+
+            var MAX_FILES = 4;
+            var MAX_SIZE = 1024 * 1024; // 1MB per file
+            var selected = []; // Array<File>
+
+            function showToast(text) {
+              try {
+                var msg = document.createElement('div');
+                msg.textContent = text;
+                msg.style.position = 'fixed';
+                msg.style.left = '50%';
+                msg.style.bottom = '20px';
+                msg.style.transform = 'translateX(-50%)';
+                msg.style.background = 'var(--page)';
+                msg.style.border = '1px solid var(--border)';
+                msg.style.borderRadius = '12px';
+                msg.style.padding = '10px 14px';
+                msg.style.boxShadow = '0 4px 16px rgba(0,0,0,0.18)';
+                msg.style.zIndex = '1001';
+                document.body.appendChild(msg);
+                setTimeout(function () { msg.remove(); }, 1800);
+              } catch (e) { }
+            }
+
+            function fmtBytes(bytes) {
+              if (bytes === 0 || bytes == null) return '';
+              var k = 1024, sizes = ['B', 'KB', 'MB', 'GB'];
+              var i = Math.floor(Math.log(bytes) / Math.log(k));
+              i = Math.min(i, sizes.length - 1);
+              return (bytes / Math.pow(k, i)).toFixed(i ? 1 : 0) + ' ' + sizes[i];
+            }
+
+            function syncInput() {
+              // Keep input.files in sync with `selected`
+              try {
+                var dt = new DataTransfer();
+                selected.forEach(function (f) { dt.items.add(f); });
+                input.files = dt.files;
+              } catch (e) {
+                // If DataTransfer is unavailable, leave input as is.
+              }
+            }
+
+            function refreshPreview() {
+              preview.innerHTML = '';
+              selected.forEach(function (file, idx) {
+                var chip = document.createElement('div');
+                chip.className = 'attach-file';
+
+                // --- Begin: media preview logic ---
+                var previewElem = null;
+                if (file.type && file.type.startsWith('image/')) {
+                  // Image preview
+                  previewElem = document.createElement('img');
+                  previewElem.src = URL.createObjectURL(file);
+                  previewElem.style.width = '30px';
+                  previewElem.style.height = '30px';
+                  previewElem.style.objectFit = 'cover';
+                  previewElem.style.borderRadius = '6px';
+                  previewElem.style.display = 'block';
+                } else if (file.type && file.type.startsWith('video/')) {
+                  // Video preview
+                  previewElem = document.createElement('video');
+                  previewElem.src = URL.createObjectURL(file);
+                  previewElem.style.width = '30px';
+                  previewElem.style.height = '30px';
+                  previewElem.style.objectFit = 'cover';
+                  previewElem.style.borderRadius = '8px';
+                  previewElem.muted = true;
+                  previewElem.playsInline = true;
+                  previewElem.style.display = 'block';
+                  // Auto-play after metadata loads (silent)
+                  previewElem.addEventListener('loadedmetadata', function () {
+                    try { previewElem.play(); } catch (e) { }
+                  });
+                }
+                // --- End: media preview logic ---
+
+                var nameSpan = document.createElement('span');
+                // Truncate long names and append file size
+                var baseName = file.name || '';
+                var shortName = baseName.length > 30 ? baseName.slice(0, 27) + '...' : baseName;
+                var sizeLabel = file.size ? ' • ' + fmtBytes(file.size) : '';
+                nameSpan.textContent = shortName + sizeLabel;
+
+                var remove = document.createElement('button');
+                remove.type = 'button';
+                remove.className = 'attach-remove';
+                remove.setAttribute('aria-label', 'Remove file');
+                // Insert SVG icon explicitly, not as HTML
+                var remSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                remSvg.setAttribute('viewBox', '0 0 24 24');
+                remSvg.setAttribute('width', '16');
+                remSvg.setAttribute('height', '16');
+                remSvg.setAttribute('aria-hidden', 'true');
+                var p1 = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+                p1.setAttribute('points', '6,6 18,18');
+                p1.setAttribute('fill', 'none');
+                p1.setAttribute('stroke', 'currentColor');
+                p1.setAttribute('stroke-width', '2');
+                p1.setAttribute('stroke-linecap', 'round');
+                p1.setAttribute('stroke-linejoin', 'round');
+                var p2 = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+                p2.setAttribute('points', '18,6 6,18');
+                p2.setAttribute('fill', 'none');
+                p2.setAttribute('stroke', 'currentColor');
+                p2.setAttribute('stroke-width', '2');
+                p2.setAttribute('stroke-linecap', 'round');
+                p2.setAttribute('stroke-linejoin', 'round');
+                remSvg.appendChild(p1);
+                remSvg.appendChild(p2);
+                remove.appendChild(remSvg);
+                remove.addEventListener('click', function () {
+                  selected.splice(idx, 1);
+                  syncInput();
+                  refreshPreview();
+                });
+
+                // Insert preview (image/video) before filename, else fallback to icon for non-media
+                if (previewElem) {
+                  chip.appendChild(previewElem);
+                } else {
+                  // Fallback SVG icon for non-image/video files
+                  var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                  icon.setAttribute('viewBox', '0 0 24 24');
+                  icon.setAttribute('width', '16'); icon.setAttribute('height', '16'); icon.setAttribute('aria-hidden', 'true');
+                  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                  path.setAttribute('d', 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z');
+                  path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'currentColor'); path.setAttribute('stroke-width', '2'); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
+                  icon.appendChild(path);
+                  chip.appendChild(icon);
+                }
+                chip.appendChild(nameSpan);
+                chip.appendChild(remove);
+                preview.appendChild(chip);
+              });
+            }
+
+            function addFiles(list) {
+              var files = Array.prototype.slice.call(list || []);
+              if (!files.length) return;
+
+              var rejections = [];
+              // Enforce size and count
+              files.forEach(function (f) {
+                if (f.size > MAX_SIZE) {
+                  rejections.push('"' + f.name + '" is larger than 1MB');
+                  return;
+                }
+                if (selected.length >= MAX_FILES) {
+                  rejections.push('Only up to ' + MAX_FILES + ' files allowed');
+                  return;
+                }
+                // Avoid duplicates by name+size
+                var dup = selected.some(function (s) { return s.name === f.name && s.size === f.size; });
+                if (!dup) { selected.unshift(f); }
+              });
+
+              if (rejections.length) {
+                showToast(rejections[0]);
+              }
+              syncInput();
+              refreshPreview();
+            }
+
+            btn && btn.addEventListener('click', function () { input && input.click(); });
+            input && input.addEventListener('change', function () { addFiles(input.files); });
+
+            function allowDrag(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              if (drop) drop.classList.add('drag');
+            }
+            function clearDrag() {
+              if (drop) drop.classList.remove('drag');
+            }
+            ['dragenter', 'dragover'].forEach(function (ev) {
+              drop && drop.addEventListener(ev, allowDrag);
+            });
+            ['dragleave', 'dragend', 'drop'].forEach(function (ev) {
+              drop && drop.addEventListener(ev, clearDrag);
+            });
+            drop && drop.addEventListener('drop', function (e) {
+              e.preventDefault();
+              addFiles(e.dataTransfer && e.dataTransfer.files);
+            });
+
+            // Final validation on submit (in case of programmatic tampering)
+            form && form.addEventListener('submit', function (e) {
+              var files = input && input.files ? Array.prototype.slice.call(input.files) : [];
+              if (files.length > MAX_FILES) {
+                e.preventDefault();
+                showToast('Attach up to ' + MAX_FILES + ' files only');
+                return;
+              }
+              var tooBig = files.find(function (f) { return f.size > MAX_SIZE; });
+              if (tooBig) {
+                e.preventDefault();
+                showToast('"' + tooBig.name + '" exceeds 1MB');
+                return;
+              }
+            });
+          })();
+          var closeButtons = Array.prototype.slice.call(overlay.querySelectorAll('[data-close]'));
+          var focusable = function () {
+            return Array.prototype.slice.call(overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'));
+          };
+          function open() {
+            overlay.classList.add('open');
+            overlay.removeAttribute('aria-hidden');
+            document.addEventListener('keydown', onKey);
+            // focus first input
+            var first = overlay.querySelector('input, textarea, select, button');
+            if (first) first.focus({ preventScroll: true });
+          }
+          function close() {
+            overlay.classList.remove('open');
+            overlay.setAttribute('aria-hidden', 'true');
+            document.removeEventListener('keydown', onKey);
+          }
+          function onKey(e) {
+            if (e.key === 'Escape') { close(); }
+            if (e.key === 'Tab' && overlay.classList.contains('open')) {
+              // very light focus trap
+              var nodes = focusable();
+              if (!nodes.length) return;
+              var first = nodes[0], last = nodes[nodes.length - 1];
+              if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+              else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+            }
+          }
+          triggers.forEach(function (t) {
+            t.addEventListener('click', function (e) { e.preventDefault(); open(); });
+          });
+          overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) close();
+          });
+          closeButtons.forEach(function (btn) {
+            btn.addEventListener('click', function () { close(); });
+          });
+          if (form) {
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var submit = form.querySelector('button[type="submit"]');
+              if (submit) {
+                submit.disabled = true;
+                var prev = submit.textContent;
+                submit.textContent = 'Sending…';
+                // Simulate submit; replace with real endpoint when available
+                setTimeout(function () {
+                  submit.disabled = false;
+                  submit.textContent = prev;
+                  form.reset();
+                  close();
+                  // lightweight toast
+                  try {
+                    var msg = document.createElement('div');
+                    msg.textContent = 'Thanks! We received your report.';
+                    msg.style.position = 'fixed';
+                    msg.style.left = '50%';
+                    msg.style.bottom = '20px';
+                    msg.style.transform = 'translateX(-50%)';
+                    msg.style.background = 'var(--page)';
+                    msg.style.border = '1px solid var(--border)';
+                    msg.style.borderRadius = '12px';
+                    msg.style.padding = '10px 14px';
+                    msg.style.boxShadow = '0 4px 16px rgba(0,0,0,0.18)';
+                    msg.style.zIndex = '1001';
+                    document.body.appendChild(msg);
+                    setTimeout(function () { msg.remove(); }, 1800);
+                  } catch (e) { }
+                }, 800);
+              }
+            });
+          }
+        })();
+      });
+  </script>
+  <script>
+    // --- Scroll Reveal ---
+    (function () {
+      const SELECTOR = '[data-reveal], [data-reveal-stagger]';
+      function prepTarget(el) {
+        if (el.__revealReady) return;
+        el.__revealReady = true;
+        if (el.hasAttribute('data-reveal-stagger')) {
+          Array.from(el.children).forEach((child, idx) => {
+            child.style.setProperty('--i', idx);
+          });
+        }
+        io.observe(el);
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add('in');
+            if (el.hasAttribute('data-reveal-once')) { io.unobserve(el); }
+          } else {
+            if (!el.hasAttribute('data-reveal-once')) { el.classList.remove('in'); }
+          }
+        });
+      }, { threshold: 0.15 });
+
+      const targets = document.querySelectorAll(SELECTOR);
+      targets.forEach(prepTarget);
+
+      // Support dynamic content (like template mounting)
+      const obs = new MutationObserver(m => {
+        m.forEach(rec => {
+          rec.addedNodes.forEach(n => {
+            if (n.nodeType === 1) {
+              if (n.matches(SELECTOR)) prepTarget(n);
+              n.querySelectorAll(SELECTOR).forEach(prepTarget);
+            }
+          });
+        });
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
+</body>
+
+</html>

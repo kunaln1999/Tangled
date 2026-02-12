@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility — Tangled</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="shortcut icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="apple-touch-icon" href="Images/tangled-spiral-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body class="page-safety">
+  <!-- Header widget mount -->
+  <div id="app-header-mount"></div>
+
+  <main class="page-main" aria-labelledby="accessibility-title" id="main-content">
+    <div class="content">
+      <section class="hero cover" aria-label="Accessibility Centre cover image">
+        <div class="inner">
+          <h1 id="accessibility-title">Accessibility at Tangled</h1>
+          <p class="subheading">Making Tangled welcoming and usable for everyone.</p>
+        </div>
+      </section>
+
+      <section id="screen-reader" class="section" aria-labelledby="screen-reader-h2">
+        <h2 id="screen-reader-h2">Screen Reader Support</h2>
+        <p>Tangled is designed to work well with popular screen readers, including VoiceOver, NVDA, and JAWS. We use
+          semantic HTML and ARIA roles where appropriate.</p>
+      </section>
+
+      <section id="keyboard" class="section" aria-labelledby="keyboard-h2">
+        <h2 id="keyboard-h2">Keyboard Navigation</h2>
+        <p>You can navigate all interactive elements using keyboard alone. Focus outlines are visible and consistent.
+        </p>
+      </section>
+
+      <section id="color-contrast" class="section" aria-labelledby="color-contrast-h2">
+        <h2 id="color-contrast-h2">Color & Contrast</h2>
+        <p>We ensure sufficient contrast between text and background colors to meet WCAG AA standards.</p>
+      </section>
+
+      <section id="third-party" class="section" aria-labelledby="third-party-h2">
+        <h2 id="third-party-h2">Third-party Tools</h2>
+        <p>We audit third-party scripts and integrations to maintain accessibility compliance and user privacy.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer widget mount -->
+  <div id="app-footer-mount"></div>
+
+  <script>
+    fetch('index.html')
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        // Ensure logo sprite is present for <use href="#logo-tangled">
+        if (!document.getElementById('logo-tangled')) {
+          const sprite = doc.querySelector('svg symbol#logo-tangled');
+          if (sprite) {
+            const svgWrap = document.createElement('svg');
+            svgWrap.setAttribute('aria-hidden', 'true');
+            svgWrap.setAttribute('focusable', 'false');
+            svgWrap.setAttribute('width', '0');
+            svgWrap.setAttribute('height', '0');
+            svgWrap.setAttribute('style', 'position:absolute; width:0; height:0; overflow:hidden');
+            svgWrap.appendChild(sprite.cloneNode(true));
+            document.body.insertBefore(svgWrap, document.body.firstChild);
+          }
+        }
+        const headerTpl = doc.getElementById('app-header-template');
+        const footerTpl = doc.getElementById('app-footer-template');
+
+        const headerMount = document.getElementById('app-header-mount');
+        if (headerTpl && headerMount) {
+          const frag = headerTpl.content.cloneNode(true);
+          headerMount.replaceWith(frag);
+        }
+        const footerMount = document.getElementById('app-footer-mount');
+        if (footerTpl && footerMount) {
+          const frag = footerTpl.content.cloneNode(true);
+          footerMount.replaceWith(frag);
+        }
+
+        // After mounting, wire up the header hamburger just like on index.html
+        (function () {
+          function toggleHeader(expand, header, btn) {
+            if (!header) return;
+            const willExpand = (typeof expand === 'boolean') ? expand : !header.classList.contains('expanded');
+            header.classList.toggle('expanded', willExpand);
+            if (btn) {
+              btn.classList.toggle('is-open', willExpand);
+              btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+            }
+          }
+
+          // Event delegation so it works even if header is mounted later from template
+          document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.hamburger');
+            if (!btn) return;
+            const header = btn.closest('.site-header') || document.querySelector('.site-header');
+            toggleHeader(undefined, header, btn);
+          }, true);
+
+          // Close expanded state when resizing to desktop
+          let lastWidth = window.innerWidth;
+          window.addEventListener('resize', function () {
+            const now = window.innerWidth;
+            if (lastWidth !== now) {
+              if (now > 980) {
+                document.querySelectorAll('.site-header.expanded').forEach(function (h) {
+                  h.classList.remove('expanded');
+                  const b = h.querySelector('.hamburger');
+                  if (b) { b.classList.remove('is-open'); b.setAttribute('aria-expanded', 'false'); }
+                });
+              }
+              lastWidth = now;
+            }
+          });
+        })();
+
+        // Update footer year if present
+        (function () {
+          var y = document.getElementById('year');
+          if (y) { y.textContent = String(new Date().getFullYear()); }
+        })();
+      });
+  </script>
+</body>
+
+</html>

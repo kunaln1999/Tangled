@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tangled — Find Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="shortcut icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="apple-touch-icon" href="Images/tangled-spiral-favicon.png">
+  <!-- Fallback Inter web font for better font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <!-- Cookies & Consent (universal, RFC 6265 compliant) -->
+  <script src="cookies.js" defer></script>
+</head>
+
+<body class="page-index">
+
+  <!-- Hidden SVG sprite: reusable Tangled logo -->
+  <svg aria-hidden="true" focusable="false" width="0" height="0"
+    style="position:absolute; width:0; height:0; overflow:hidden">
+    <symbol id="logo-tangled" viewBox="0 0 149 24">
+      <path
+        d="M11.0678 5.63819C10.9021 5.63819 10.7678 5.77251 10.7678 5.93819V23.0668C10.7678 23.2325 10.6335 23.3668 10.4678 23.3668H5.15607C4.99038 23.3668 4.85607 23.2325 4.85607 23.0668V5.93819C4.85607 5.77251 4.72175 5.63819 4.55607 5.63819H0.3C0.134315 5.63819 0 5.50388 0 5.33819V0.933167C0 0.767482 0.134315 0.633167 0.3 0.633167H15.3239C15.4895 0.633167 15.6239 0.767481 15.6239 0.933167V5.33819C15.6239 5.50388 15.4895 5.63819 15.3239 5.63819H11.0678Z"
+        fill="currentColor" />
+      <path
+        d="M29.1362 14.9246C29.343 14.9246 29.4877 14.7204 29.4193 14.5253L27.1882 8.16394C27.0944 7.89633 26.7159 7.89633 26.622 8.16395L24.3909 14.5253C24.3225 14.7204 24.4673 14.9246 24.674 14.9246H29.1362ZM31.1278 19.4171H22.6825L21.3948 23.1643C21.3531 23.2855 21.2391 23.3668 21.111 23.3668H15.4566C15.2465 23.3668 15.1014 23.1564 15.1762 22.9601L23.6042 0.82641C23.6485 0.710061 23.7601 0.633167 23.8846 0.633167H29.9257C30.0502 0.633167 30.1617 0.710062 30.206 0.826411L38.634 22.9601C38.7088 23.1564 38.5638 23.3668 38.3537 23.3668H32.6992C32.5711 23.3668 32.4571 23.2855 32.4155 23.1643L31.1278 19.4171Z"
+        fill="currentColor" />
+      <path
+        d="M41.6755 23.3668C41.5098 23.3668 41.3755 23.2325 41.3755 23.0668V0.933167C41.3755 0.767481 41.5098 0.633167 41.6755 0.633167H47.1414C47.2335 0.633167 47.3205 0.675443 47.3773 0.747846L57.6699 13.8504C57.8459 14.0745 58.2059 13.95 58.2059 13.6651V0.933166C58.2059 0.767481 58.3402 0.633167 58.5059 0.633167H63.7874C63.9531 0.633167 64.0874 0.767481 64.0874 0.933167V23.0668C64.0874 23.2325 63.9531 23.3668 63.7874 23.3668H58.3517C58.2596 23.3668 58.1726 23.3246 58.1158 23.2522L47.8232 10.1496C47.6472 9.9255 47.2873 10.05 47.2873 10.3349V23.0668C47.2873 23.2325 47.1529 23.3668 46.9873 23.3668H41.6755Z"
+        fill="currentColor" />
+      <path
+        d="M80.3388 10.9432C80.3388 10.7775 80.4731 10.6432 80.6388 10.6432H91.7718C91.9375 10.6432 92.0719 10.7776 92.0707 10.9433C92.063 12.0316 92.0131 13.027 91.921 13.9296C91.8204 14.9146 91.6194 15.8291 91.3177 16.6734C90.8955 17.8593 90.3224 18.9146 89.5985 19.8392C88.8746 20.7437 88.02 21.5075 87.0347 22.1307C86.0696 22.7337 85.0038 23.196 83.8376 23.5176C82.6713 23.8392 81.4447 24 80.1578 24C78.3883 24 76.7696 23.7085 75.3018 23.1256C73.854 22.5427 72.6073 21.7286 71.5617 20.6834C70.5161 19.6181 69.7017 18.3518 69.1186 16.8844C68.5354 15.397 68.2439 13.7588 68.2439 11.9698C68.2439 10.201 68.5254 8.58291 69.0884 7.11558C69.6715 5.62814 70.4859 4.36181 71.5315 3.31658C72.5972 2.27136 73.8741 1.45729 75.3621 0.874371C76.8501 0.291457 78.509 0 80.3388 0C82.7115 0 84.7927 0.512563 86.5823 1.53769C88.2919 2.51696 89.662 4.00983 90.6926 6.01629C90.7715 6.16998 90.7004 6.35727 90.5407 6.42334L85.5009 8.50896C85.3483 8.57209 85.1739 8.49965 85.1051 8.34954C84.5991 7.24512 83.9554 6.44184 83.174 5.9397C82.3496 5.39699 81.4045 5.12563 80.3388 5.12563C79.454 5.12563 78.6497 5.29648 77.9258 5.63819C77.202 5.9598 76.5786 6.43216 76.0558 7.05528C75.5531 7.65829 75.151 8.39196 74.8493 9.25628C74.5678 10.1206 74.4271 11.0854 74.4271 12.1508C74.4271 13.1156 74.5477 14.01 74.789 14.8342C75.0504 15.6583 75.4325 16.3719 75.9352 16.9749C76.4379 17.5779 77.0612 18.0503 77.8052 18.392C78.5492 18.7136 79.4138 18.8744 80.3991 18.8744C80.9822 18.8744 81.5453 18.8141 82.0882 18.6935C82.6311 18.5528 83.1137 18.3417 83.536 18.0603C83.9783 17.7588 84.3403 17.3769 84.6218 16.9146C84.8534 16.5342 85.0237 16.0859 85.1329 15.5695C85.1708 15.3898 85.0296 15.2261 84.846 15.2261H80.6388C80.4731 15.2261 80.3388 15.0918 80.3388 14.9261V10.9432Z"
+        fill="currentColor" />
+      <path
+        d="M101.42 0.633167C101.586 0.633167 101.72 0.767481 101.72 0.933167V18.0618C101.72 18.2275 101.854 18.3618 102.02 18.3618H108.508C108.674 18.3618 108.808 18.4961 108.808 18.6618V23.0668C108.808 23.2325 108.674 23.3668 108.508 23.3668H96.1083C95.9426 23.3668 95.8083 23.2325 95.8083 23.0668V0.933167C95.8083 0.767481 95.9426 0.633167 96.1083 0.633167H101.42Z"
+        fill="currentColor" />
+      <path
+        d="M124.801 5.33819C124.801 5.50388 124.666 5.63819 124.501 5.63819H118.073C117.907 5.63819 117.773 5.77251 117.773 5.93819V9.13719C117.773 9.30287 117.907 9.43719 118.073 9.43719H124.109C124.274 9.43719 124.409 9.5715 124.409 9.73719V14.1422C124.409 14.3079 124.274 14.4422 124.109 14.4422H118.073C117.907 14.4422 117.773 14.5765 117.773 14.7422V18.0618C117.773 18.2275 117.907 18.3618 118.073 18.3618H124.501C124.666 18.3618 124.801 18.4961 124.801 18.6618V23.0668C124.801 23.2325 124.666 23.3668 124.501 23.3668H112.161C111.996 23.3668 111.861 23.2325 111.861 23.0668V0.933167C111.861 0.767481 111.996 0.633167 112.161 0.633167H124.501C124.666 0.633167 124.801 0.767481 124.801 0.933167V5.33819Z"
+        fill="currentColor" />
+      <path
+        d="M134.975 18.0618C134.975 18.2275 135.109 18.3618 135.275 18.3618H136.332C137.358 18.3618 138.272 18.201 139.077 17.8794C139.881 17.5578 140.555 17.1156 141.098 16.5528C141.661 15.9899 142.083 15.3266 142.364 14.5628C142.666 13.7789 142.817 12.9246 142.817 12C142.817 11.0955 142.666 10.2513 142.364 9.46734C142.063 8.68342 141.63 8.01005 141.067 7.44724C140.525 6.88442 139.851 6.44221 139.047 6.1206C138.242 5.799 137.337 5.63819 136.332 5.63819H135.275C135.109 5.63819 134.975 5.77251 134.975 5.93819V18.0618ZM129.063 0.933167C129.063 0.767481 129.197 0.633167 129.363 0.633167H137.81C139.358 0.633167 140.806 0.944724 142.153 1.56784C143.521 2.19095 144.707 3.02513 145.712 4.07035C146.738 5.09548 147.542 6.30151 148.125 7.68844C148.708 9.05528 149 10.4925 149 12C149 13.4874 148.708 14.9246 148.125 16.3116C147.562 17.6784 146.768 18.8844 145.743 19.9296C144.737 20.9749 143.551 21.809 142.183 22.4322C140.836 23.0553 139.378 23.3668 137.81 23.3668H129.363C129.197 23.3668 129.063 23.2325 129.063 23.0668V0.933167Z"
+        fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <!-- Header (widget mount) -->
+  <div id="app-header-mount"></div>
+  <template id="app-header-template">
+    <header class="site-header">
+      <div class="brand">
+        <a href="index.html" aria-label="Tangled home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 24" aria-label="Tangled logo">
+            <use href="#logo-tangled"></use>
+          </svg>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Top navigation">
+        <a href="date.html">Date</a>
+        <a href="contact_us.html">Contact</a>
+        <a href="support.html">Support</a>
+        <a href="safety.html">Safety</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </header>
+  </template>
+
+  <script>
+    // Expand/collapse the header island on tablet/mobile
+    (function () {
+      function toggleHeader(expand, header, btn) {
+        if (!header) return;
+        const willExpand = (typeof expand === 'boolean') ? expand : !header.classList.contains('expanded');
+        header.classList.toggle('expanded', willExpand);
+        if (btn) {
+          btn.classList.toggle('is-open', willExpand);
+          btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+        }
+      }
+
+      // Event delegation so it works even if header is mounted later from template
+      document.addEventListener('click', function (e) {
+        const btn = e.target.closest('.hamburger');
+        if (!btn) return;
+        const header = btn.closest('.site-header') || document.querySelector('.site-header');
+        toggleHeader(undefined, header, btn);
+      }, true);
+
+      // Close expanded state when resizing to desktop
+      let lastWidth = window.innerWidth;
+      window.addEventListener('resize', function () {
+        const now = window.innerWidth;
+        if (lastWidth !== now) {
+          if (now > 980) {
+            document.querySelectorAll('.site-header.expanded').forEach(function (h) {
+              h.classList.remove('expanded');
+              const b = h.querySelector('.hamburger');
+              if (b) { b.classList.remove('is-open'); b.setAttribute('aria-expanded', 'false'); }
+            });
+          }
+          lastWidth = now;
+        }
+      });
+    })();
+  </script>
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-photo left" aria-hidden="true">
+        <svg viewBox="0 0 304 379" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+          <defs>
+            <clipPath id="heroFrameLeft">
+              <path id="heroBorderLeft"
+                d="M0.867525 79.0092C1.20699 52.1073 1.37673 38.6564 6.77658 28.1758C11.4947 19.0184 19.0957 11.4039 28.2447 6.66956C38.7156 1.25109 52.1501 1.05769 79.0191 0.670901C104.66 0.301786 131.801 0 152 0C172.199 0 199.34 0.301786 224.981 0.670901C251.85 1.05769 265.284 1.25109 275.755 6.66956C284.904 11.4039 292.505 19.0184 297.223 28.1758C302.623 38.6564 302.793 52.1073 303.132 79.0091C303.585 114.841 304 156.688 304 189.5C304 222.312 303.585 264.159 303.132 299.991C302.793 326.893 302.623 340.344 297.223 350.824C292.505 359.982 284.904 367.596 275.755 372.33C265.284 377.749 251.85 377.942 224.981 378.329C199.34 378.698 172.199 379 152 379C131.801 379 104.66 378.698 79.0191 378.329C52.1501 377.942 38.7156 377.749 28.2447 372.33C19.0957 367.596 11.4947 359.982 6.77658 350.824C1.37673 340.344 1.20699 326.893 0.867526 299.991C0.415373 264.159 0 222.312 0 189.5C0 156.688 0.415372 114.841 0.867525 79.0092Z" />
+            </clipPath>
+            <linearGradient id="heroStrokeLeft" x1="0" y1="0" x2="304" y2="379" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF9EC4" />
+              <stop offset="50%" stop-color="#FF4F8B" />
+              <stop offset="100%" stop-color="#FF2673" />
+            </linearGradient>
+          </defs>
+          <image href="Images/lovers.png" width="304" height="379" clip-path="url(#heroFrameLeft)"
+            preserveAspectRatio="xMidYMid slice" />
+          <use href="#heroBorderLeft" fill="none" stroke="url(#heroStrokeLeft)" stroke-width="3.5"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+
+      <div class="hero-photo right" aria-hidden="true">
+        <svg viewBox="0 0 304 379" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+          <defs>
+            <clipPath id="heroFrameRight">
+              <path id="heroBorderRight"
+                d="M0.867525 79.0092C1.20699 52.1073 1.37673 38.6564 6.77658 28.1758C11.4947 19.0184 19.0957 11.4039 28.2447 6.66956C38.7156 1.25109 52.1501 1.05769 79.0191 0.670901C104.66 0.301786 131.801 0 152 0C172.199 0 199.34 0.301786 224.981 0.670901C251.85 1.05769 265.284 1.25109 275.755 6.66956C284.904 11.4039 292.505 19.0184 297.223 28.1758C302.623 38.6564 302.793 52.1073 303.132 79.0091C303.585 114.841 304 156.688 304 189.5C304 222.312 303.585 264.159 303.132 299.991C302.793 326.893 302.623 340.344 297.223 350.824C292.505 359.982 284.904 367.596 275.755 372.33C265.284 377.749 251.85 377.942 224.981 378.329C199.34 378.698 172.199 379 152 379C131.801 379 104.66 378.698 79.0191 378.329C52.1501 377.942 38.7156 377.749 28.2447 372.33C19.0957 367.596 11.4947 359.982 6.77658 350.824C1.37673 340.344 1.20699 326.893 0.867526 299.991C0.415373 264.159 0 222.312 0 189.5C0 156.688 0.415372 114.841 0.867525 79.0092Z" />
+            </clipPath>
+            <linearGradient id="heroStrokeRight" x1="0" y1="0" x2="304" y2="379" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF9EC4" />
+              <stop offset="50%" stop-color="#FF4F8B" />
+              <stop offset="100%" stop-color="#FF2673" />
+            </linearGradient>
+          </defs>
+          <image href="Images/woman-grace.png" width="304" height="379" clip-path="url(#heroFrameRight)"
+            preserveAspectRatio="xMidYMid slice" />
+          <use href="#heroBorderRight" fill="none" stroke="url(#heroStrokeRight)" stroke-width="3.5"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <div class="hero-inner">
+        <div>
+          <div class="hero-photos-inline" aria-hidden="true">
+            <svg class="left" viewBox="0 0 304 379" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+              <defs>
+                <clipPath id="heroFrameInlineLeft">
+                  <path id="heroBorderInlineLeft"
+                    d="M0.867525 79.0092C1.20699 52.1073 1.37673 38.6564 6.77658 28.1758C11.4947 19.0184 19.0957 11.4039 28.2447 6.66956C38.7156 1.25109 52.1501 1.05769 79.0191 0.670901C104.66 0.301786 131.801 0 152 0C172.199 0 199.34 0.301786 224.981 0.670901C251.85 1.05769 265.284 1.25109 275.755 6.66956C284.904 11.4039 292.505 19.0184 297.223 28.1758C302.623 38.6564 302.793 52.1073 303.132 79.0091C303.585 114.841 304 156.688 304 189.5C304 222.312 303.585 264.159 303.132 299.991C302.793 326.893 302.623 340.344 297.223 350.824C292.505 359.982 284.904 367.596 275.755 372.33C265.284 377.749 251.85 377.942 224.981 378.329C199.34 378.698 172.199 379 152 379C131.801 379 104.66 378.698 79.0191 378.329C52.1501 377.942 38.7156 377.749 28.2447 372.33C19.0957 367.596 11.4947 359.982 6.77658 350.824C1.37673 340.344 1.20699 326.893 0.867526 299.991C0.415373 264.159 0 222.312 0 189.5C0 156.688 0.415372 114.841 0.867525 79.0092Z" />
+                </clipPath>
+                <linearGradient id="heroStrokeInlineLeft" x1="0" y1="0" x2="304" y2="379"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF9EC4" />
+                  <stop offset="50%" stop-color="#FF4F8B" />
+                  <stop offset="100%" stop-color="#FF2673" />
+                </linearGradient>
+              </defs>
+              <image href="Images/lovers.png" width="304" height="379" clip-path="url(#heroFrameInlineLeft)"
+                preserveAspectRatio="xMidYMid slice" />
+              <use href="#heroBorderInlineLeft" fill="none" stroke="url(#heroStrokeInlineLeft)" stroke-width="3.5"
+                vector-effect="non-scaling-stroke" />
+            </svg>
+            <svg class="right" viewBox="0 0 304 379" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+              <defs>
+                <clipPath id="heroFrameInlineRight">
+                  <path id="heroBorderInlineRight"
+                    d="M0.867525 79.0092C1.20699 52.1073 1.37673 38.6564 6.77658 28.1758C11.4947 19.0184 19.0957 11.4039 28.2447 6.66956C38.7156 1.25109 52.1501 1.05769 79.0191 0.670901C104.66 0.301786 131.801 0 152 0C172.199 0 199.34 0.301786 224.981 0.670901C251.85 1.05769 265.284 1.25109 275.755 6.66956C284.904 11.4039 292.505 19.0184 297.223 28.1758C302.623 38.6564 302.793 52.1073 303.132 79.0091C303.585 114.841 304 156.688 304 189.5C304 222.312 303.585 264.159 303.132 299.991C302.793 326.893 302.623 340.344 297.223 350.824C292.505 359.982 284.904 367.596 275.755 372.33C265.284 377.749 251.85 377.942 224.981 378.329C199.34 378.698 172.199 379 152 379C131.801 379 104.66 378.698 79.0191 378.329C52.1501 377.942 38.7156 377.749 28.2447 372.33C19.0957 367.596 11.4947 359.982 6.77658 350.824C1.37673 340.344 1.20699 326.893 0.867526 299.991C0.415373 264.159 0 222.312 0 189.5C0 156.688 0.415372 114.841 0.867525 79.0092Z" />
+                </clipPath>
+                <linearGradient id="heroStrokeInlineRight" x1="0" y1="0" x2="304" y2="379"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF9EC4" />
+                  <stop offset="50%" stop-color="#FF4F8B" />
+                  <stop offset="100%" stop-color="#FF2673" />
+                </linearGradient>
+              </defs>
+              <image href="Images/woman-grace.png" width="304" height="379" clip-path="url(#heroFrameInlineRight)"
+                preserveAspectRatio="xMidYMid slice" />
+              <use href="#heroBorderInlineRight" fill="none" stroke="url(#heroStrokeInlineRight)" stroke-width="3.5"
+                vector-effect="non-scaling-stroke" />
+            </svg>
+          </div>
+          <h1 class="display">Find your love</h1>
+          <p class="subheading">Start dating ✦ with Tangled</p>
+
+          <div class="qr-card" aria-label="Download QR">
+            <img src="SVG/tangled-qr.svg" alt="Scan to download the Tangled app" class="qr" />
+          </div>
+          <div class="store-buttons" role="group" aria-label="Download on app stores" style="margin-top:16px">
+            <a class="btn-store" href="https://apps.apple.com/" target="_blank" rel="noopener"
+              aria-label="Download on the App Store">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.94 5.19C15.3181 4.75428 15.6063 4.24817 15.7882 3.70074C15.9701 3.1533 16.0421 2.57533 16 2C14.8394 2.09369 13.762 2.63956 13 3.52C12.6351 3.94198 12.3586 4.43288 12.1868 4.96364C12.015 5.49441 11.9515 6.05424 12 6.61C12.5661 6.61472 13.1258 6.4891 13.6356 6.24286C14.1454 5.99662 14.5917 5.63637 14.94 5.19ZM17.46 12.63C17.4667 11.8637 17.6685 11.1118 18.0465 10.4452C18.4244 9.77859 18.9659 9.21926 19.62 8.82C19.2072 8.22524 18.6615 7.73483 18.0262 7.38767C17.3909 7.04052 16.6835 6.84615 15.96 6.82C14.4 6.66 12.96 7.73 12.13 7.73C11.3 7.73 10.13 6.84 8.83 6.86C7.98013 6.888 7.15202 7.13578 6.42645 7.57919C5.70088 8.02259 5.10261 8.64648 4.69 9.39C2.93 12.45 4.24 17 6 19.47C6.8 20.68 7.8 22.05 9.12 22C10.44 21.95 10.87 21.18 12.4 21.18C13.93 21.18 14.4 22 15.7 21.97C17 21.94 17.92 20.73 18.76 19.52C19.355 18.6415 19.8199 17.6816 20.14 16.67C19.3475 16.332 18.6713 15.7693 18.195 15.0513C17.7188 14.3333 17.4632 13.4916 17.46 12.63Z"
+                  fill="currentColor" />
+              </svg>
+              <span class="label" data-text="App Store"><span class="text">App Store</span></span>
+            </a>
+            <a class="btn-store" href="https://play.google.com/store" target="_blank" rel="noopener">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.9754 3.01879L15.9352 1.2872C15.9475 1.26499 15.9553 1.24056 15.9582 1.21533C15.9611 1.19009 15.9589 1.16453 15.9519 1.14012C15.9449 1.1157 15.9332 1.0929 15.9174 1.07302C15.9016 1.05314 15.882 1.03657 15.8598 1.02426C15.8149 0.999384 15.762 0.993353 15.7127 1.00749C15.6634 1.02163 15.6217 1.05478 15.5968 1.09964L14.6264 2.85042C13.7984 2.48743 12.9041 2.30002 12 2.30002C11.0959 2.30002 10.2017 2.48743 9.37365 2.85042L8.40317 1.09964C8.3783 1.05478 8.33662 1.02163 8.28731 1.00749C8.238 0.993353 8.18509 0.999384 8.14022 1.02426C8.09536 1.04913 8.06221 1.0908 8.04807 1.14012C8.03394 1.18943 8.03997 1.24234 8.06484 1.2872L9.02469 3.0188C8.11102 3.46917 7.33903 4.16247 6.7934 5.02265C6.24777 5.88284 5.94958 6.87667 5.93153 7.89515H18.0685C18.0505 6.87667 17.7523 5.88283 17.2067 5.02265C16.661 4.16246 15.889 3.46916 14.9754 3.01879ZM9.19912 5.67439C9.09888 5.67439 9.0009 5.64467 8.91756 5.58898C8.83421 5.53329 8.76926 5.45414 8.7309 5.36153C8.69254 5.26893 8.6825 5.16703 8.70206 5.06872C8.72161 4.97041 8.76988 4.88011 8.84076 4.80923C8.91163 4.73835 9.00194 4.69008 9.10025 4.67053C9.19856 4.65097 9.30046 4.66101 9.39306 4.69937C9.48567 4.73773 9.56482 4.80268 9.62051 4.88603C9.6762 4.96937 9.70592 5.06736 9.70592 5.16759C9.70577 5.30196 9.65233 5.43078 9.55731 5.52579C9.4623 5.6208 9.33348 5.67424 9.19912 5.67439ZM14.8009 5.67439C14.7007 5.67439 14.6027 5.64467 14.5193 5.58898C14.436 5.53329 14.371 5.45414 14.3327 5.36153C14.2943 5.26893 14.2843 5.16703 14.3038 5.06872C14.3234 4.97041 14.3717 4.88011 14.4425 4.80923C14.5134 4.73835 14.6037 4.69008 14.702 4.67053C14.8003 4.65097 14.9022 4.66101 14.9948 4.69937C15.0874 4.73773 15.1666 4.80268 15.2223 4.88603C15.278 4.96937 15.3077 5.06736 15.3077 5.16759C15.3075 5.30196 15.2541 5.43078 15.1591 5.52579C15.0641 5.6208 14.9353 5.67424 14.8009 5.67439ZM5.93144 17.1714C5.93144 17.5605 6.08601 17.9337 6.36115 18.2088C6.63629 18.4839 7.00946 18.6385 7.39857 18.6385H8.37217V21.6395C8.37168 21.8184 8.40652 21.9957 8.47467 22.1612C8.54282 22.3267 8.64295 22.4771 8.76933 22.6038C8.89571 22.7306 9.04585 22.8311 9.21115 22.8997C9.37645 22.9683 9.55366 23.0036 9.73263 23.0036C9.91159 23.0036 10.0888 22.9683 10.2541 22.8997C10.4194 22.8311 10.5695 22.7306 10.6959 22.6038C10.8223 22.4771 10.9224 22.3267 10.9906 22.1612C11.0587 21.9957 11.0936 21.8184 11.0931 21.6395V18.6385H12.9069V21.6395C12.9065 21.8184 12.9413 21.9957 13.0094 22.1612C13.0776 22.3267 13.1777 22.4771 13.3041 22.6038C13.4305 22.7306 13.5806 22.8311 13.7459 22.8997C13.9112 22.9683 14.0884 23.0036 14.2674 23.0036C14.4464 23.0036 14.6236 22.9683 14.7889 22.8997C14.9542 22.8311 15.1043 22.7306 15.2307 22.6038C15.3571 22.4771 15.4572 22.3267 15.5254 22.1612C15.5935 21.9957 15.6283 21.8184 15.6278 21.6395V18.6385H16.6015C16.9906 18.6385 17.3638 18.4839 17.6389 18.2088C17.914 17.9337 18.0686 17.5605 18.0686 17.1714V8.37525H5.93144V17.1714ZM4.06416 8.14184C3.70347 8.14225 3.35767 8.28572 3.10263 8.54076C2.84758 8.79581 2.70412 9.14161 2.70371 9.5023V15.1708C2.70322 15.3497 2.73806 15.527 2.80621 15.6925C2.87436 15.858 2.97449 16.0084 3.10087 16.1351C3.22725 16.2619 3.37739 16.3624 3.54269 16.431C3.70799 16.4996 3.8852 16.5349 4.06416 16.5349C4.24313 16.5349 4.42034 16.4996 4.58564 16.431C4.75094 16.3624 4.90108 16.2619 5.02746 16.1351C5.15384 16.0084 5.25397 15.858 5.32212 15.6925C5.39027 15.527 5.42511 15.3497 5.42462 15.1708V9.5023C5.42421 9.14161 5.28075 8.79581 5.0257 8.54076C4.77065 8.28571 4.42485 8.14225 4.06416 8.14184ZM19.9359 8.14184C19.5752 8.14225 19.2294 8.28571 18.9743 8.54076C18.7193 8.79581 18.5758 9.14161 18.5754 9.5023V15.1708C18.5749 15.3497 18.6097 15.527 18.6779 15.6925C18.746 15.858 18.8462 16.0084 18.9726 16.1351C19.0989 16.2619 19.2491 16.3624 19.4144 16.431C19.5797 16.4996 19.7569 16.5349 19.9359 16.5349C20.1148 16.5349 20.292 16.4996 20.4573 16.431C20.6226 16.3624 20.7728 16.2619 20.8991 16.1351C21.0255 16.0084 21.1257 15.858 21.1938 15.6925C21.262 15.527 21.2968 15.3497 21.2963 15.1708V9.5023C21.2959 9.14161 21.1524 8.79581 20.8974 8.54076C20.6423 8.28572 20.2965 8.14225 19.9359 8.14184Z"
+                  fill="currentColor" />
+              </svg>
+              <span class="label" data-text="Google Play"><span class="text">Google Play</span></span>
+            </a>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="pink">
+      <div class="pink-inner" data-reveal-stagger>
+        <div class="tile chat-card" role="listitem">
+          <h3>Make faster and better matches</h3>
+        </div>
+        <div class="tile chat-card" role="listitem">
+          <h3>Start instant chats that spark real conversations</h3>
+        </div>
+      </div>
+    </section>
+    <section class="spacer-section">
+      <div class="outermost-ring">
+        <div class="outer-ring">
+          <div class="quote-box">
+            <blockquote>
+              “Love is not about finding the perfect person, but about seeing an imperfect person perfectly.”
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLUE SECTION -->
+
+    <!-- YELLOW SECTION (now contains yellow's content previously in white) -->
+    <section class="yellow">
+      <div class="yellow-inner" data-reveal-stagger>
+        <div class="island-content">
+          <h2>Speed<br />Up Your Curiosity</h2>
+          <p>Profiles tailored to you—decide together, match instantly. Conversations begin with a spark.</p>
+        </div>
+        <div class="card-img stack" aria-hidden="true">
+          <img class="stack-photo pos1" alt="Portrait of a smiling woman" src="Images/woman-one.png" />
+          <img class="stack-photo pos2" alt="Portrait of a smiling man" src="Images/man-one.png" />
+          <img class="stack-photo pos3" alt="Portrait of a woman" src="Images/woman-two.png" />
+          <img class="stack-photo pos4" alt="Portrait of a man" src="Images/man-two.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- WHITE SECTION (3-column: left heading, centered image card, right heading) -->
+    <section class="white">
+      <div class="white-inner three" data-reveal>
+        <h2 class="side-heading left">Find<br />Real<br />Love</h2>
+        <div class="pill-stage">
+          <svg class="framed-svg" viewBox="0 0 304 379" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <clipPath id="heroFrameWhite">
+                <path id="heroBorderWhite"
+                  d="M0.867525 79.0092C1.20699 52.1073 1.37673 38.6564 6.77658 28.1758C11.4947 19.0184 19.0957 11.4039 28.2447 6.66956C38.7156 1.25109 52.1501 1.05769 79.0191 0.670901C104.66 0.301786 131.801 0 152 0C172.199 0 199.34 0.301786 224.981 0.670901C251.85 1.05769 265.284 1.25109 275.755 6.66956C284.904 11.4039 292.505 19.0184 297.223 28.1758C302.623 38.6564 302.793 52.1073 303.132 79.0091C303.585 114.841 304 156.688 304 189.5C304 222.312 303.585 264.159 303.132 299.991C302.793 326.893 302.623 340.344 297.223 350.824C292.505 359.982 284.904 367.596 275.755 372.33C265.284 377.749 251.85 377.942 224.981 378.329C199.34 378.698 172.199 379 152 379C131.801 379 104.66 378.698 79.0191 378.329C52.1501 377.942 38.7156 377.749 28.2447 372.33C19.0957 367.596 11.4947 359.982 6.77658 350.824C1.37673 340.344 1.20699 326.893 0.867526 299.991C0.415373 264.159 0 222.312 0 189.5C0 156.688 0.415372 114.841 0.867525 79.0092Z" />
+              </clipPath>
+            </defs>
+            <image href="Images/couple-love.png" width="304" height="379" clip-path="url(#heroFrameWhite)"
+              preserveAspectRatio="xMidYMid slice" />
+            <!-- Exact-border stroke that matches the clip path -->
+            <linearGradient id="heroStrokeWhite" x1="0" y1="0" x2="304" y2="379" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF9EC4" />
+              <stop offset="50%" stop-color="#FF4F8B" />
+              <stop offset="100%" stop-color="#FF2673" />
+            </linearGradient>
+            <use href="#heroBorderWhite" fill="none" stroke="url(#heroStrokeWhite)" stroke-width="6"
+              vector-effect="non-scaling-stroke" />
+          </svg>
+          <div class="floating-pills" aria-hidden="true">
+            <span class="pill p-tl" style="--r:-6deg; --dur:7.2s; --delay:.2s;">What made you<br />smile today?</span>
+            <span class="pill p-tr" style="--r:5deg; --dur:6.8s; --delay:.5s;">Coffee or chai<br />person?</span>
+            <span class="pill p-bl" style="--r:5deg; --dur:7.6s; --delay:.1s;">Your ideal weekend<br />plan?</span>
+            <span class="pill p-br" style="--r:-5deg; --dur:6.9s; --delay:.4s;">One skill you’re<br />proud of?</span>
+          </div>
+        </div>
+        <h2 class="side-heading right">Make<br />Dates<br />Happen</h2>
+      </div>
+    </section>
+
+    <!-- Footer (widget mount) -->
+    <div id="app-footer-mount"></div>
+    <template id="app-footer-template">
+      <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+          <div class="foot-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 24" aria-label="Tangled logo">
+              <use href="#logo-tangled"></use>
+            </svg>
+          </div>
+          <div class="foot-cols" role="navigation" aria-label="Footer navigation">
+            <div class="foot-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="safety.html">Safety</a></li>
+                <li><a href="#">Android ↗</a></li>
+                <li><a href="#">iOS ↗</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="cookies-policy.html">Cookies policy</a></li>
+                <li><a href="privacy_policy.html">Privacy policy</a></li>
+                <li><a href="terms_of_services.html">Terms and conditions</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Social icons removed from here -->
+        </div>
+        <div class="footer-cta" role="region" aria-label="Get the Tangled app">
+          <div class="cta-card">
+            <div class="cta-qr" aria-label="QR code to download the app">
+              <img src="SVG/tangled-qr.svg" alt="Tangled download QR" class="qr" />
+            </div>
+            <div class="cta-text">
+              <p>Scan the QR to get the Tangled app</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copy">© <span id="year">2025</span> Tangled. All rights reserved.</div>
+          <div class="foot-social" role="group" aria-label="Social links">
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="Follow on X">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M18.3263 2H21.6998L14.3297 10.4718L23 22H16.2113L10.894 15.0082L4.80995 22H1.43443L9.31745 12.9385L1 2H7.9611L12.7674 8.39079L18.3263 2ZM17.1423 19.9693H19.0116L6.9454 3.9241H4.93946L17.1423 19.9693Z"
+                  fill="currentColor" />
+              </svg>
+              <span class="sr-only">X</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M17.34 5.46C17.1027 5.46 16.8707 5.53038 16.6733 5.66224C16.476 5.79409 16.3222 5.98151 16.2313 6.20078C16.1405 6.42005 16.1168 6.66133 16.1631 6.89411C16.2094 7.12689 16.3236 7.34071 16.4915 7.50853C16.6593 7.67635 16.8731 7.79064 17.1059 7.83694C17.3387 7.88324 17.5799 7.85948 17.7992 7.76866C18.0185 7.67783 18.2059 7.52402 18.3378 7.32668C18.4696 7.12935 18.54 6.89734 18.54 6.66C18.54 6.34174 18.4136 6.03652 18.1885 5.81147C17.9635 5.58643 17.6583 5.46 17.34 5.46ZM21.94 7.88C21.9206 7.0503 21.7652 6.2294 21.48 5.45C21.2257 4.78313 20.83 4.17928 20.32 3.68C19.8248 3.16743 19.2196 2.77418 18.55 2.53C17.7727 2.23616 16.9508 2.07721 16.12 2.06C15.06 2 14.72 2 12 2C9.28 2 8.94 2 7.88 2.06C7.04915 2.07721 6.22734 2.23616 5.45 2.53C4.78168 2.77665 4.17693 3.16956 3.68 3.68C3.16743 4.17518 2.77418 4.78044 2.53 5.45C2.23616 6.22734 2.07721 7.04915 2.06 7.88C2 8.94 2 9.28 2 12C2 14.72 2 15.06 2.06 16.12C2.07721 16.9508 2.23616 17.7727 2.53 18.55C2.77418 19.2196 3.16743 19.8248 3.68 20.32C4.17693 21.2234 4.78168 21.2234 5.45 21.47C6.22734 21.7638 7.04915 21.9228 7.88 21.94C8.94 22 9.28 22 12 22C14.72 22 15.06 22 16.12 21.94C16.9508 21.9228 17.7727 21.7638 18.55 21.47C19.2196 21.2258 19.8248 20.8326 20.32 20.32C20.8322 19.8226 21.2283 19.2182 21.48 18.55C21.7652 17.7706 21.9206 16.9497 21.94 16.12C21.94 15.06 22 14.72 22 12C22 9.28 22 8.94 21.94 7.88ZM20.14 16C20.1327 16.6348 20.0178 17.2637 19.8 17.86C19.6403 18.2952 19.3839 18.6884 19.05 19.01C18.7256 19.3405 18.3332 19.5964 17.9 19.76C17.3037 19.9778 16.6748 20.0927 16.04 20.1C15.04 20.15 14.67 20.16 12.04 20.16C9.41 20.16 9.04 20.16 8.04 20.1C7.38089 20.1123 6.72459 20.0109 6.1 19.8C5.68578 19.6281 5.31136 19.3728 5 19.05C4.66809 18.7287 4.41484 18.3352 4.26 17.9C4.01586 17.2952 3.88044 16.6519 3.86 16C3.86 15 3.8 14.63 3.8 12C3.8 9.37 3.8 9 3.86 8C3.86448 7.35106 3.98295 6.70795 4.21 6.1C4.38605 5.67791 4.65626 5.30166 5 5C5.30381 4.65617 5.67929 4.3831 6.1 4.2C6.70955 3.98004 7.352 3.86508 8 3.86C9 3.86 9.37 3.8 12 3.8C14.63 3.8 15 3.8 16 3.86C16.6348 3.86728 17.2637 3.98225 17.86 4.2C18.3144 4.36865 18.7223 4.64285 19.05 5C19.3777 5.30718 19.6338 5.68273 19.8 6.1C20.0223 6.70893 20.1373 7.35178 20.14 8C20.19 9 20.2 9.37 20.2 12C20.2 14.63 20.19 15 20.14 16ZM12 6.87C10.9858 6.87198 9.99496 7.17453 9.15265 7.73942C8.31035 8.30431 7.65438 9.1062 7.26763 10.0438C6.88089 10.9813 6.78072 12.0125 6.97979 13.0069C7.17886 14.0014 7.66824 14.9145 8.38608 15.631C9.10392 16.3474 10.018 16.835 11.0129 17.0321C12.0077 17.2293 13.0387 17.1271 13.9755 16.7385C14.9123 16.35 15.7129 15.6924 16.2761 14.849C16.8394 14.0056 17.14 13.0142 17.14 12C17.1413 11.3251 17.0092 10.6566 16.7512 10.033C16.4933 9.40931 16.1146 8.84281 15.6369 8.36605C15.1592 7.88929 14.5919 7.51168 13.9678 7.25493C13.3436 6.99818 12.6749 6.86736 12 6.87ZM12 15.33C11.3414 15.33 10.6976 15.1347 10.15 14.7688C9.60234 14.4029 9.17552 13.8828 8.92348 13.2743C8.67144 12.6659 8.6055 11.9963 8.73398 11.3503C8.86247 10.7044 9.17963 10.111 9.64533 9.64533C10.111 9.17963 10.7044 8.86247 11.3503 8.73398C11.9963 8.6055 12.6659 8.67144 13.2743 8.92348C13.8828 9.17552 14.4029 9.60234 14.7688 10.15C15.1347 10.6976 15.33 11.3414 15.33 12C15.33 12.4373 15.2439 12.8703 15.0765 13.2743C14.9092 13.6784 14.6639 14.0454 14.3547 14.3547C14.0454 14.6639 13.6784 14.9092 13.2743 15.0765C12.8703 15.2439 12.4373 15.33 12 15.33Z"
+                  fill="currentColor" />
+              </svg>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Follow on Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M15.12 5.32003H17V2.14003C16.0897 2.04538 15.1751 1.99865 14.26 2.00003C11.54 2.00003 9.67999 3.66003 9.67999 6.70003V9.32003H6.60999V12.88H9.67999V22H13.36V12.88H16.42L16.88 9.32003H13.36V7.05003C13.36 6.00003 13.64 5.32003 15.12 5.32003Z"
+                  fill="currentColor" />
+              </svg>
+              <span class="sr-only">Facebook</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </template>
+  </main>
+
+
+  <script>
+    (function () {
+      const mount = document.getElementById('app-header-mount');
+      const tpl = document.getElementById('app-header-template');
+      if (mount && tpl) {
+        const frag = tpl.content.cloneNode(true);
+        mount.replaceWith(frag);
+      }
+
+      // Mount the footer widget
+      const footerMount = document.getElementById('app-footer-mount');
+      const footerTpl = document.getElementById('app-footer-template');
+      if (footerMount && footerTpl) {
+        const fragFooter = footerTpl.content.cloneNode(true);
+        footerMount.replaceWith(fragFooter);
+      }
+
+      const body = document.body;
+      const btn = document.querySelector('.hamburger');
+      const overlay = document.getElementById('menu-overlay');
+      const sheet = overlay ? overlay.querySelector('.menu-sheet') : null;
+      if (!(btn && overlay && sheet)) return;
+
+      // --- Transparent header at top logic ---
+      const headerEl = document.querySelector('.site-header');
+      function updateHeaderTop() {
+        if (!headerEl) return;
+        const atTop = (window.scrollY || document.documentElement.scrollTop || 0) <= 2;
+        // Keep solid header while menu is open for contrast
+        if (atTop && !document.body.classList.contains('menu-open')) {
+          headerEl.classList.add('is-top');
+        } else {
+          headerEl.classList.remove('is-top');
+        }
+      }
+      // Initial state and listeners
+      updateHeaderTop();
+      window.addEventListener('scroll', updateHeaderTop, { passive: true });
+      window.addEventListener('resize', updateHeaderTop, { passive: true });
+      window.addEventListener('pageshow', updateHeaderTop);
+      // --- end transparent header logic ---
+
+      function overlayClick(e) {
+        const clickedBackdrop = (e.target === overlay);
+        const clickedCloseLink = !!e.target.closest('[data-close]');
+        if (clickedBackdrop || clickedCloseLink) closeMenu();
+      }
+      function onKey(e) { if (e.key === 'Escape') closeMenu(); }
+
+      function positionPopup() {
+        if (!sheet || !btn) return;
+        const br = btn.getBoundingClientRect();
+        const margin = 10;
+        const vw = window.innerWidth || document.documentElement.clientWidth;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const panelWidth = Math.min(Math.max(sheet.offsetWidth || 240, 220), 360);
+        const panelHeight = sheet.offsetHeight || 0;
+        const left = Math.min(Math.max(20, br.right - panelWidth), vw - 20 - panelWidth);
+        const top = 90; // fixed spacing from top as requested
+        sheet.style.left = left + 'px';
+        sheet.style.right = 'auto';
+        sheet.style.top = top + 'px';
+        sheet.style.maxHeight = (vh - 40) + 'px';
+        sheet.style.overflowY = 'auto';
+      }
+
+      function openMenu() {
+        body.classList.add('menu-open');
+        overlay.classList.add('open');
+        positionPopup();
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-open');
+        btn.setAttribute('aria-label', 'Close menu');
+        overlay.addEventListener('click', overlayClick);
+        document.addEventListener('keydown', onKey);
+        window.addEventListener('resize', positionPopup, { passive: true });
+      }
+      function closeMenu() {
+        body.classList.remove('menu-open');
+        overlay.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-label', 'Open menu');
+        window.removeEventListener('resize', positionPopup);
+        overlay.removeEventListener('click', overlayClick);
+        document.removeEventListener('keydown', onKey);
+        updateHeaderTop();
+      }
+
+      btn.addEventListener('click', function () {
+        const open = overlay.classList.contains('open');
+        open ? closeMenu() : openMenu();
+      });
+    })();
+  </script>
+  <script>
+    // Wave-style label splitter for store buttons
+    (function () {
+      const labels = document.querySelectorAll('.store-buttons .btn-store .label');
+      labels.forEach(label => {
+        const text = (label.getAttribute('data-text') || label.textContent || '').trim();
+        if (!text) return;
+
+        // Build two rows (original and clone) with per-character spans
+        const buildRow = (cls) => {
+          const row = document.createElement('span');
+          row.className = 'row' + (cls ? ' ' + cls : '');
+          [...text].forEach((ch, idx) => {
+            const s = document.createElement('span');
+            s.style.setProperty('--i', idx);
+            s.textContent = ch;
+            row.appendChild(s);
+          });
+          return row;
+        };
+
+        // Clear existing content and inject rows
+        label.textContent = '';
+        label.appendChild(buildRow('original'));
+        label.appendChild(buildRow('clone'));
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      // Auto-shuffle stacked images every 2 seconds with sensible pauses.
+      const stack = document.querySelector('.yellow .card-img.stack');
+      if (!stack) return;
+
+      const POS = ['pos1', 'pos2', 'pos3', 'pos4'];
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function rotateOnce() {
+        // Move current top (pos1) to the back (pos4), shift others forward.
+        const photos = stack.querySelectorAll('.stack-photo');
+        photos.forEach(img => {
+          const current = POS.find(p => img.classList.contains(p));
+          if (!current) return;
+          const next = (current === 'pos1') ? 'pos4'
+            : (current === 'pos2') ? 'pos1'
+              : (current === 'pos3') ? 'pos2'
+                : /* pos4 */            'pos3';
+          img.classList.remove(current);
+          img.classList.add(next);
+        });
+      }
+
+      let timer = null;
+      function start() {
+        if (timer || prefersReduced || document.hidden) return;
+        timer = setInterval(rotateOnce, 3000);
+      }
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      // Start/stop based on visibility and hover to avoid distracting the user
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stop(); else start();
+      });
+      stack.addEventListener('pointerenter', stop);
+      stack.addEventListener('pointerleave', start);
+      stack.addEventListener('pointerdown', stop, { passive: true });
+      window.addEventListener('pointerup', start, { passive: true });
+
+      // Click: perform a single rotate for a bit of delight / control
+      stack.addEventListener('click', rotateOnce);
+
+      // Kick off
+      start();
+    })();
+  </script>
+  <script>
+    (function () {
+      var y = document.getElementById('year');
+      if (y) { y.textContent = String(new Date().getFullYear()); }
+    })();
+  </script>
+  <script>
+    // Section content scroll reveal (replays on each entry by default)
+    (function () {
+      const SELECTOR = '[data-reveal], [data-reveal-stagger]';
+
+      // Observe a single target (and prep stagger indices if needed)
+      function prepTarget(el) {
+        if (el.__revealReady) return; // idempotent
+        el.__revealReady = true;
+
+        if (el.hasAttribute('data-reveal-stagger')) {
+          Array.from(el.children).forEach((child, idx) => {
+            child.style.setProperty('--i', idx);
+          });
+        }
+        io.observe(el);
+      }
+
+      // Intersection behavior:
+      // - Default: replay — add 'in' on enter, remove on leave
+      // - data-reveal-once: run once — add 'in' on enter and unobserve
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add('in');
+            if (el.hasAttribute('data-reveal-once')) {
+              io.unobserve(el);
+            }
+          } else {
+            // Only remove when replay is desired (no data-reveal-once)
+            if (!el.hasAttribute('data-reveal-once')) {
+              el.classList.remove('in');
+            }
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.15
+      });
+
+      // Initial attach
+      document.querySelectorAll(SELECTOR).forEach(prepTarget);
+
+      // In case of soft navigations or late DOM injections, auto-attach to new nodes
+      const mo = new MutationObserver((mutations) => {
+        mutations.forEach(m => {
+          m.addedNodes && m.addedNodes.forEach(node => {
+            if (!(node instanceof Element)) return;
+            if (node.matches && node.matches(SELECTOR)) prepTarget(node);
+            // Also check descendants
+            node.querySelectorAll && node.querySelectorAll(SELECTOR).forEach(prepTarget);
+          });
+        });
+      });
+      mo.observe(document.documentElement, { childList: true, subtree: true });
+
+      // Optional: reset reveals on history navigation restore (bfcache)
+      window.addEventListener('pageshow', (e) => {
+        if (e.persisted) {
+          document.querySelectorAll(SELECTOR).forEach(el => {
+            if (!el.hasAttribute('data-reveal-once')) {
+              el.classList.remove('in');
+              io.observe(el);
+            }
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>

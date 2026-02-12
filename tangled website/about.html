@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Tangled</title>
+  <meta name="description"
+    content="Discover the story behind Tangled, the modern dating app built for real connections and genuine relationships.">
+  <link rel="icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="shortcut icon" type="image/png" href="Images/tangled-spiral-favicon.png">
+  <link rel="apple-touch-icon" href="Images/tangled-spiral-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body class="page-about">
+  <!-- Header widget mount -->
+  <div id="app-header-mount"></div>
+
+  <main class="page-main">
+    <!-- Decorative Background Blobs -->
+    <div class="about-bg-blobs" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- HERO -->
+    <section class="about-hero" aria-label="Hero">
+      <div class="about-hero__inner" data-reveal-stagger>
+        <div class="about-hero__content">
+          <h1 class="about-hero__heading">The art of <em>finding</em> <span>perfect string.</span></h1>
+          <p class="about-hero__sub">Tangled makes dating feel less complicated and more like a <em>meaningful
+              journey</em> toward real connection.</p>
+
+        </div>
+        <div class="about-hero__visual">
+          <div class="pill-stage">
+            <svg class="framed-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              overflow="visible">
+              <defs>
+                <clipPath id="frameAboutHero">
+                  <!-- Slightly larger path for clipping to ensure no gap with the border -->
+                  <path
+                    d="M160 399.5C100 376 19 281 0 181C-11 101 59 0.5 160 0.5C261 0.5 331 101 320 181C309 261 220 376 160 399.5Z" />
+                </clipPath>
+                <linearGradient id="strokeAboutHero" x1="0" y1="0" x2="320" y2="400" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF9EC4" />
+                  <stop offset="50%" stop-color="#FF4F8B" />
+                  <stop offset="100%" stop-color="#FF2673" />
+                </linearGradient>
+
+              </defs>
+
+
+              <!-- Image Layer -->
+              <image href="Images/about-hero-vibe.png" width="320" height="400" clip-path="url(#frameAboutHero)"
+                preserveAspectRatio="xMidYMid slice" />
+
+              <!-- Main Border (Smoothed Path) -->
+              <path id="borderAboutHero"
+                d="M160 398.5C100 375 20 280 1 180C-10 100 60 1.5 160 1.5C260 1.5 330 100 320 180C310 260 220 375 160 398.5Z"
+                fill="none" stroke="url(#strokeAboutHero)" stroke-width="4" vector-effect="non-scaling-stroke" />
+
+
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="about-story" aria-label="Our Story">
+      <div class="about-story__inner" data-reveal-stagger>
+        <div class="about-story__visual">
+          <div class="pill-stage">
+            <svg class="framed-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              overflow="visible">
+              <defs>
+                <clipPath id="frameAboutStory">
+                  <!-- Slightly larger for overlap -->
+                  <path d="M0 200C0 79 79 0 199 0C301 0 320 79 320 200C320 321 241 400 120 400C39 400 0 321 0 200Z" />
+                </clipPath>
+                <linearGradient id="strokeAboutStory" x1="0" y1="0" x2="320" y2="400" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF9EC4" />
+                  <stop offset="50%" stop-color="#FF4F8B" />
+                  <stop offset="100%" stop-color="#FF2673" />
+                </linearGradient>
+              </defs>
+              <image href="Images/three-girls.png" width="320" height="400" clip-path="url(#frameAboutStory)"
+                preserveAspectRatio="xMidYMid slice" />
+              <path id="borderAboutStory"
+                d="M1 200C1 80 80 1 200 1C300 1 319 80 319 200C319 320 240 399 120 399C40 399 1 320 1 200Z" fill="none"
+                stroke="url(#strokeAboutStory)" stroke-width="3.5" vector-effect="non-scaling-stroke" />
+
+            </svg>
+
+          </div>
+        </div>
+        <div class="about-story__content">
+          <h2 class="section-title">Made for<br><em>real people.</em></h2>
+          <p>Tangled started with a simple idea that<br><em>find their match</em> shouldn’t feel like work,
+            it should feel like discovering something beautiful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="about-pillars" aria-label="Our Values">
+      <div class="about-pillars__inner" data-reveal-stagger>
+        <h2 class="section-title central">Our <em>Pillars</em></h2>
+        <div class="pillars-grid" data-reveal-stagger>
+          <div class="pillar-card">
+            <div class="pillar-card__icon"><em>❀</em></div>
+            <h3>Authenticity</h3>
+            <p>We encourage you to be exactly who you are. No filters, just you.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-card__icon"><em>✿</em></div>
+            <h3>Safety</h3>
+            <p>Your safety is our priority. We build tools that keep the community kind.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-card__icon"><em>❁</em></div>
+            <h3>Meaning</h3>
+            <p>We favor depth over distance. Every feature is designed for real talk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="about-manifesto" aria-label="Manifesto">
+      <div class="about-manifesto__inner" data-reveal-stagger>
+        <div class="manifesto-content">
+          <p class="caveat">Our Philosophy</p>
+          <h2 class="display">Dating is a<br><em>beautiful tangle.</em></h2>
+          <p class="manifesto-sub">We believe in the beauty of what you can’t plan. The moments that unfold when you
+            stop chasing perfection and start appreciating the imperfect magic of connecting with someone.</p>
+        </div>
+
+        <div class="manifesto-visual-v2" data-reveal-stagger>
+          <div class="collage-item p1"><img src="Images/couple-walking.png" alt="A couple walking together"></div>
+          <div class="collage-item p2"><img src="Images/beach-couple.png" alt="A couple at the beach"></div>
+          <div class="collage-item p3"><img src="Images/running-couple.png" alt="A couple running together"></div>
+          <div class="collage-item p2"><img src="Images/park-couple.png" alt="A couple sitting in a park at sunset">
+          </div>
+        </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer widget mount -->
+  <div id="app-footer-mount"></div>
+
+  <script src="cookies.js" defer></script>
+  <script>
+    // Fetch header/footer from index.html
+    fetch('index.html')
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        // Logo sprite
+        if (!document.getElementById('logo-tangled')) {
+          const sprite = doc.querySelector('svg symbol#logo-tangled');
+          if (sprite) {
+            const svgWrap = document.createElement('svg');
+            svgWrap.setAttribute('aria-hidden', 'true');
+            svgWrap.setAttribute('style', 'position:absolute; width:0; height:0; overflow:hidden');
+            svgWrap.appendChild(sprite.cloneNode(true));
+            document.body.insertBefore(svgWrap, document.body.firstChild);
+          }
+        }
+        // Mount header/footer
+        const hTpl = doc.getElementById('app-header-template');
+        const fTpl = doc.getElementById('app-footer-template');
+
+        const hMount = document.getElementById('app-header-mount');
+        if (hTpl && hMount) {
+          hMount.replaceWith(hTpl.content.cloneNode(true));
+        }
+
+        const fMount = document.getElementById('app-footer-mount');
+        if (fTpl && fMount) {
+          fMount.replaceWith(fTpl.content.cloneNode(true));
+        }
+
+        // Year update
+        const y = document.getElementById('year');
+        if (y) y.textContent = String(new Date().getFullYear());
+
+        // Hamburger wire-up
+        (function () {
+          function toggleHeader(expand, header, btn) {
+            if (!header) return;
+            const willExpand = (typeof expand === 'boolean') ? expand : !header.classList.contains('expanded');
+            header.classList.toggle('expanded', willExpand);
+            if (btn) {
+              btn.classList.toggle('is-open', willExpand);
+              btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+            }
+          }
+          document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.hamburger');
+            if (!btn) return;
+            const header = btn.closest('.site-header') || document.querySelector('.site-header');
+            toggleHeader(undefined, header, btn);
+          }, true);
+        })();
+      });
+
+    // Section content scroll reveal (replays on each entry by default)
+    (function () {
+      const SELECTOR = '[data-reveal], [data-reveal-stagger]';
+
+      // Observe a single target (and prep stagger indices if needed)
+      function prepTarget(el) {
+        if (el.__revealReady) return; // idempotent
+        el.__revealReady = true;
+
+        if (el.hasAttribute('data-reveal-stagger')) {
+          Array.from(el.children).forEach((child, idx) => {
+            child.style.setProperty('--i', idx);
+          });
+        }
+        io.observe(el);
+      }
+
+      // Intersection behavior:
+      // - Default: replay — add 'in' on enter, remove on leave
+      // - data-reveal-once: run once — add 'in' on enter and unobserve
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add('in');
+            if (el.hasAttribute('data-reveal-once')) {
+              io.unobserve(el);
+            }
+          } else {
+            // Only remove when replay is desired (no data-reveal-once)
+            if (!el.hasAttribute('data-reveal-once')) {
+              el.classList.remove('in');
+            }
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.15
+      });
+
+      // Initial attach
+      document.querySelectorAll(SELECTOR).forEach(prepTarget);
+
+      // In case of soft navigations or late DOM injections, auto-attach to new nodes
+      const mo = new MutationObserver((mutations) => {
+        mutations.forEach(m => {
+          m.addedNodes && m.addedNodes.forEach(node => {
+            if (!(node instanceof Element)) return;
+            if (node.matches && node.matches(SELECTOR)) prepTarget(node);
+            // Also check descendants
+            node.querySelectorAll && node.querySelectorAll(SELECTOR).forEach(prepTarget);
+          });
+        });
+      });
+      mo.observe(document.documentElement, { childList: true, subtree: true });
+
+      // Optional: reset reveals on history navigation restore (bfcache)
+      window.addEventListener('pageshow', (e) => {
+        if (e.persisted) {
+          document.querySelectorAll(SELECTOR).forEach(el => {
+            if (!el.hasAttribute('data-reveal-once')) {
+              el.classList.remove('in');
+              io.observe(el);
+            }
+          });
+        }
+      });
+    })();
+
+
+  </script>
+</body>
+
+</html>
